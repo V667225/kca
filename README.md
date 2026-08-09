@@ -1,7 +1,7 @@
 <div align="center">
 
 # ⚡ SAUTI YAKO
-### Kenya Children Assembly Digital Hub
+### KENYA CHILDREN ASSEMBLY DIGITAL HUB
 
 ![Status](https://img.shields.io/badge/STATUS-LIVE-00FF41?style=for-the-badge)
 ![Mobile](https://img.shields.io/badge/MOBILE-READY-00F3FF?style=for-the-badge)
@@ -17,9 +17,27 @@
 
 ## ✦ Vision
 
-Sauti Yako is a high-energy civic platform built around **child participation, protection, rights education and safe reporting**.
+Sauti Yako is a civic platform built around **child participation, protection, rights education and safe reporting**.
 
-The interface combines a neon dashboard with a safety-first reporting experience intended to make important information approachable for young users.
+The interface combines a high-energy dashboard with a safety-first reporting experience intended to make important information approachable for young users.
+
+## 🧭 Platform Flow
+
+```text
+Young Person
+     │
+     ├── Learn Rights
+     │      ↓
+     │   Rights Education
+     │
+     ├── Explore Assembly
+     │      ↓
+     │   Participation Hub
+     │
+     └── Seek Help / Report
+            ↓
+       Safety-oriented flow
+```
 
 ## 🚀 Core Modules
 
@@ -40,7 +58,9 @@ The interface combines a neon dashboard with a safety-first reporting experience
 
 ## 🛡️ Safety & Privacy
 
-The project is designed with safety as a first-class concern. Any real deployment handling sensitive reports should use secure server-side processing, strict access control, data minimization, audit logging, and professional child-protection procedures.
+Any real deployment handling sensitive reports should use secure server-side processing, strict access control, data minimization, audit logging and professional child-protection procedures.
+
+**Never treat a public frontend as a secure reporting backend.**
 
 ## 🛠️ Stack
 
@@ -48,7 +68,15 @@ The project is designed with safety as a first-class concern. Any real deploymen
 
 ## 🌐 Live Project
 
-**[Open Sauti Yako →](https://v667225.github.io/kca/)**
+**[→ Open Sauti Yako](https://v667225.github.io/kca/)**
+
+## 🗺️ Roadmap
+
+- [ ] Secure backend for reports
+- [ ] Privacy-first data handling
+- [ ] Accessibility improvements
+- [ ] Expanded rights education
+- [ ] County information improvements
 
 ## 👨‍💻 Project Lead
 
