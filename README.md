@@ -15,8 +15,6 @@
 - **GitHub Actions** — production build validation
 - **Vercel-ready** — recommended deployment target for the Next.js application
 
-Next.js App Router provides the foundation for a full-stack application, while Supabase provides Postgres, authentication and row-level authorization capabilities. citeturn0search4turn0search1
-
 ## Product areas
 
 - 🏛️ Assembly information and participation
@@ -54,8 +52,6 @@ Set these variables in `.env.local`:
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
-
-Supabase's current Next.js guidance uses TypeScript, Tailwind and cookie-based SSR authentication with `@supabase/ssr`. citeturn0search0turn0search9
 
 ## Database
 
