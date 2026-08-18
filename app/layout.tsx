@@ -3,10 +3,12 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { PwaRegister } from "@/components/pwa-register";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "Kenya Children Assembly | Sauti Yako",
   description: "A modern digital home for the Kenya Children Assembly — children's voices, rights, leadership and participation.",
-  manifest: "/manifest.webmanifest",
+  manifest: `${basePath}/manifest.webmanifest`,
 };
 
 export const viewport: Viewport = {
