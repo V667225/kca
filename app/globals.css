@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root { --navy:#071b34; --gold:#d6a43a; --red:#b4202a; --cream:#f7f4ed; --ink:#172033; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+::selection { background:#d6a43a; color:#071b34; }
+.container { width:min(1180px, calc(100% - 32px)); margin:auto; }
+.eyebrow { letter-spacing:.16em; text-transform:uppercase; font-size:.72rem; font-weight:800; color:#b4202a; }
+.display { font-family:Georgia, 'Times New Roman', serif; letter-spacing:-.035em; }
+.gold-rule { height:4px; width:72px; background:var(--gold); }
+.paper { background:white; border:1px solid #e6e0d3; box-shadow:0 14px 40px rgba(7,27,52,.07); }
+.nav-link { color:#dbe5f1; font-size:.9rem; font-weight:700; transition:color .2s; }
+.nav-link:hover { color:#f1c765; }
+.card { border:1px solid #e5e1d7; background:#fff; transition:transform .2s, box-shadow .2s; }
+.card:hover { transform:translateY(-3px); box-shadow:0 16px 36px rgba(7,27,52,.1); }
