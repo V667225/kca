@@ -1,140 +1,70 @@
-// Quick Exit: Redirects to a neutral site like Google immediately
-function quickExit() {
-    window.location.href = "https://www.google.com";
-}
+const navLinks = document.getElementById('navLinks');
+const menuToggle = document.getElementById('menuToggle');
+const toast = document.getElementById('toast');
 
-// Form Submission Handling
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // In a real app, this is where you'd send data to your secure database
-    const county = document.getElementById('location').value;
-    
-    alert("Your report has been sent securely. A Children's Officer in " + county + " will be alerted. Please stay safe.");
-    
-    this.reset(); // Clear the form
+menuToggle?.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.textContent = open ? '×' : '☰';
 });
 
-
-
-
-function quickExit() {
-    window.location.replace("https://www.google.com");
-}
-
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Add a loading state to the button
-    const btn = document.querySelector('.submit-btn');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Safely...';
-    btn.style.opacity = '0.7';
-
-    setTimeout(() => {
-        alert("Asante! Your report has been encrypted and sent to the Children's Office. Stay calm, help is coming.");
-        btn.innerHTML = 'Send Secure Report';
-        btn.style.opacity = '1';
-        this.reset();
-    }, 2000);
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    if (menuToggle) menuToggle.textContent = '☰';
+  });
 });
 
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add('show');
+  window.clearTimeout(showToast.timer);
+  showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 4200);
+}
 
-// Smooth Scroll for Dashboard Link
-document.querySelector('.dashboard-nav-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#dashboard').scrollIntoView({
-        behavior: 'smooth'
+const form = document.getElementById('reportForm');
+const submitBtn = document.getElementById('submitBtn');
+
+form?.addEventListener('submit', event => {
+  event.preventDefault();
+  const county = document.getElementById('location').value;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Preparing secure report…';
+
+  window.setTimeout(() => {
+    showToast(`Demo only: no report was transmitted. For urgent child protection support, call 116.`);
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Prepare secure report <span>→</span>';
+    form.reset();
+  }, 700);
+});
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(error => {
+      console.warn('Service worker registration failed:', error);
     });
-});
-
-// Form Submission Handling
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const county = document.getElementById('location').value;
-    const btn = document.querySelector('.submit-btn');
-    
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Safely...';
-    btn.style.opacity = '0.7';
-
-    setTimeout(() => {
-        alert("Asante! Your report has been encrypted and sent to the Children's Office in " + county + ". You are a brave member of the Assembly.");
-        btn.innerHTML = 'Send Secure Report';
-        btn.style.opacity = '1';
-        this.reset();
-    }, 2000);
-});
-
-// Form Submission Handling
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const county = document.getElementById('location').value;
-    const btn = document.querySelector('.submit-btn');
-    
-    // Visual feedback
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Safely...';
-    btn.style.opacity = '0.7';
-
-    // Simulate secure transmission
-    setTimeout(() => {
-        alert("Asante! Your report has been encrypted and sent to the Children's Office in " + county + ". Please stay calm, help is coming.");
-        btn.innerHTML = 'Send Secure Report';
-        btn.style.opacity = '1';
-        this.reset();
-    }, 2000);
-});
-
-
-
-// Redirects to Google and clears history so 'Back' button won't return here
-function quickExit() {
-    window.location.replace("https://www.google.com");
+  });
 }
 
-// Emergency Hotkey: Pressing 'Escape' triggers the Quick Exit
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") quickExit();
+let deferredInstallPrompt;
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  const installButton = document.createElement('button');
+  installButton.className = 'install-prompt';
+  installButton.type = 'button';
+  installButton.textContent = 'Install Sauti Yako';
+  installButton.addEventListener('click', async () => {
+    installButton.remove();
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+  });
+  document.body.appendChild(installButton);
 });
 
-// Form Submission with visual feedback
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const county = document.getElementById('location').value;
-    const btn = document.querySelector('.submit-btn');
-
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Safely...';
-    btn.style.opacity = '0.7';
-    btn.disabled = true;
-
-    // Simulate secure transmission
-    setTimeout(() => {
-        alert("Thank you. Your report has been encrypted and sent to the Children's Office in " + county + ". Please stay calm, help is coming.");
-        btn.innerHTML = 'Send Secure Report';
-        btn.style.opacity = '1';
-        btn.disabled = false;
-        this.reset();
-    }, 2000);
-});
-
-
-
-
-const facts = [
-    "Fact: In Kenya, a child is anyone below the age of 18.",
-    "Fact: You have the right to a name and nationality from birth!",
-    "Fact: It is illegal for anyone to keep you out of school.",
-    "Fact: Your opinion matters in all matters affecting you.",
-    "Fact: You have the right to be protected from child labor."
-];
-
-const factTrigger = document.querySelectorAll('.fact-trigger');
-const factText = document.getElementById('fact-text');
-
-factTrigger.forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        const randomFact = facts[Math.floor(Math.random() * facts.length)];
-        factText.innerText = randomFact;
-    });
+window.addEventListener('appinstalled', () => {
+  showToast('Sauti Yako is now installed on your device.');
 });
