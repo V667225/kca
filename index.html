@@ -1,253 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KCA | Sauti Yako, Haki Yako</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5d3b">
+  <meta name="description" content="Sauti Yako — the Kenya Children Assembly digital hub for rights education, participation and safe help-seeking.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Sauti Yako">
+  <title>Sauti Yako | Kenya Children Assembly</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="navbar">
-    <div class="logo-container">
-        <div class="logo-icon">
-            <i class="fas fa-shield-heart"></i>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Sauti Yako home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span><strong>SAUTI YAKO</strong><small>KENYA CHILDREN ASSEMBLY</small></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#assembly">Assembly</a>
+        <a href="#rights">My Rights</a>
+        <a href="#report">Get Help</a>
+        <a href="#resources">Resources</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <a class="nav-cta" href="#report">Get Help <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> A digital home for Kenya's children</div>
+        <h1>Your voice. <em>Your rights.</em><br>Our Kenya.</h1>
+        <p class="hero-lead">Learn your rights, connect with children's assemblies, find trusted help and make your voice count — safely.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#report">Speak Up <span>→</span></a>
+          <a class="button button-ghost" href="#rights">Explore your rights</a>
         </div>
-        <div class="logo-text">
-            <span class="logo-top">KENYA</span>
-            <span class="logo-bottom">CHILDREN <span>ASSEMBLY</span></span>
+        <div class="trust-row" aria-label="Safety highlights">
+          <span>✓ Child-friendly</span><span>✓ Privacy-first</span><span>✓ Kenya-wide</span>
         </div>
-    </div>
-    <a href="#dashboard" class="dashboard-nav-btn">
-        <i class="fas fa-columns"></i> My Dashboard
-    </a>
-</nav>
-
-<div class="dashboard-header" style="text-align: center; margin-top: 40px;">
-    <h2 style="color: var(--dark); font-size: 2rem;">Assembly Command Center</h2>
-    <p style="color: #666;">Welcome back! Here is what's happening in our community.</p>
-</div>
-
-<section id="dashboard" class="dashboard-grid">
-    <div class="dash-card blue">
-        <div class="card-badge">Live</div>
-        <i class="fas fa-map-marked-alt"></i>
-        <h3>47 Counties</h3>
-        <p>Connected across Kenya</p>
-    </div>
-    <div class="dash-card orange">
-        <div class="card-badge">Trending</div>
-        <i class="fas fa-comments"></i>
-        <h3>1,200+ Voices</h3>
-        <p>Children sharing ideas today</p>
-    </div>
-    <div class="dash-card purple">
-        <div class="card-badge">Upcoming</div>
-        <i class="fas fa-video"></i>
-        <h3>Next Assembly</h3>
-        <p>Friday, 4:00 PM (Online)</p>
-    </div>
-</section>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Speak Up, Stay Safe.</h1>
-            <p>Every child in Kenya has the right to be heard and protected.</p>
-<div class="hero-buttons">
-    <a href="#report-section" class="btn btn-report">Report an Issue</a>
-    <a href="#rights-section" class="btn btn-rights">Learn My Rights</a>
-</div>
-        </div>
+      </div>
+      <div class="hero-panel" aria-label="Assembly overview">
+        <div class="panel-top"><span>ASSEMBLY PULSE</span><span class="status">● LIVE</span></div>
+        <div class="pulse-number">47</div>
+        <p>counties connected</p>
+        <div class="county-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="panel-footer"><span>Children's voices</span><strong>Growing every day ↑</strong></div>
+      </div>
     </section>
 
-    <main class="container">
-        <div class="info-banner">
-            <div class="stat-item"><i class="fas fa-shield-alt"></i> 100% Private</div>
-            <div class="stat-item"><i class="fas fa-user-check"></i> Verified Officers</div>
-            <div class="stat-item"><i class="fas fa-phone-alt"></i> Toll Free 116</div>
+    <section class="quick-grid shell" id="assembly" aria-label="Platform modules">
+      <article class="quick-card green"><span class="card-icon">◎</span><span class="card-kicker">PARTICIPATE</span><h2>Assembly Hub</h2><p>Discover the Kenya Children Assembly and ways to take part in child-led civic action.</p><a href="#assembly-info">Explore assembly →</a></article>
+      <article class="quick-card gold"><span class="card-icon">◇</span><span class="card-kicker">LEARN</span><h2>Know Your Rights</h2><p>Simple, clear explanations of the rights protected for every child in Kenya.</p><a href="#rights">Learn rights →</a></article>
+      <article class="quick-card red"><span class="card-icon">!</span><span class="card-kicker">SAFETY</span><h2>Get Help</h2><p>A calm, child-friendly starting point when something feels wrong or unsafe.</p><a href="#report">Find help →</a></article>
+    </section>
+
+    <section class="section shell" id="assembly-info">
+      <div class="section-heading"><div><span class="section-label">01 / ASSEMBLY</span><h2>Children belong at the table.</h2></div><p>The Kenya Children Assembly creates space for children to participate, lead and speak about issues that affect their lives.</p></div>
+      <div class="feature-grid">
+        <article class="feature feature-dark"><span class="feature-no">01</span><h3>Participation</h3><p>Share ideas, discuss community issues and learn how child participation works.</p></article>
+        <article class="feature"><span class="feature-no">02</span><h3>Leadership</h3><p>Build confidence, civic knowledge and practical leadership skills.</p></article>
+        <article class="feature"><span class="feature-no">03</span><h3>Advocacy</h3><p>Turn children's experiences into constructive conversations and action.</p></article>
+      </div>
+    </section>
+
+    <section class="rights-section" id="rights">
+      <div class="shell">
+        <div class="section-heading light"><div><span class="section-label">02 / RIGHTS</span><h2>Know what the law says.</h2></div><p>Start with these core rights. For legal decisions or protection concerns, seek help from a qualified professional.</p></div>
+        <div class="rights-grid">
+          <article class="right-item"><span>01</span><div><h3>Education</h3><p>Every child has the right to basic education.</p></div></article>
+          <article class="right-item"><span>02</span><div><h3>Protection</h3><p>Children must be protected from abuse, neglect and violence.</p></div></article>
+          <article class="right-item"><span>03</span><div><h3>Health</h3><p>Every child has a right to the highest attainable standard of health.</p></div></article>
+          <article class="right-item"><span>04</span><div><h3>Participation</h3><p>Your views matter in decisions affecting you, according to your age and maturity.</p></div></article>
         </div>
+      </div>
+    </section>
 
-        <section id="report-section" class="glass-card">
-            <div class="section-header">
-                <h2>Safe Reporting Portal</h2>
-                <p>An officer will review this and help you within 24 hours.</p>
-            </div>
-            
-            <form id="reportForm">
-                <div class="form-group">
-                    <label>How are you feeling?</label>
-                    <div class="emoji-selector">
-                        <input type="radio" name="mood" value="unhappy" id="unhappy"><label for="unhappy">😟</label>
-                        <input type="radio" name="mood" value="scared" id="scared"><label for="scared">😨</label>
-                        <input type="radio" name="mood" value="hurt" id="hurt"><label for="hurt">🤕</label>
-                        <input type="radio" name="mood" value="angry" id="angry"><label for="angry">😠</label>
-                    </div>
-                </div>
+    <section class="section shell report-section" id="report">
+      <div class="report-intro"><span class="section-label">03 / SAFETY</span><h2>Something happened?<br><em>You can speak up.</em></h2><p>This demo provides a safe-looking interface only. It does <strong>not</strong> transmit a real report until a secure backend and verified child-protection workflow are connected.</p><a class="call-link" href="tel:116">☎ Child Helpline 116</a></div>
+      <div class="report-card">
+        <div class="card-head"><span class="shield">✓</span><div><h3>Safe Help Form</h3><p>Share only what you are comfortable sharing.</p></div></div>
+        <form id="reportForm">
+          <fieldset><legend>How are you feeling?</legend><div class="moods"><label><input type="radio" name="mood" value="worried"><span>😟</span><small>Worried</small></label><label><input type="radio" name="mood" value="scared"><span>😨</span><small>Scared</small></label><label><input type="radio" name="mood" value="hurt"><span>🤕</span><small>Hurt</small></label><label><input type="radio" name="mood" value="angry"><span>😠</span><small>Angry</small></label></div></fieldset>
+          <label class="field">County<select id="location" name="county" required><option value="" selected disabled>Select your county</option><option>Baringo</option><option>Bomet</option><option>Bungoma</option><option>Busia</option><option>Elgeyo-Marakwet</option><option>Embu</option><option>Garissa</option><option>Homa Bay</option><option>Isiolo</option><option>Kajiado</option><option>Kakamega</option><option>Kericho</option><option>Kiambu</option><option>Kilifi</option><option>Kirinyaga</option><option>Kisii</option><option>Kisumu</option><option>Kitui</option><option>Kwale</option><option>Laikipia</option><option>Lamu</option><option>Machakos</option><option>Makueni</option><option>Mandera</option><option>Marsabit</option><option>Meru</option><option>Migori</option><option>Mombasa</option><option>Murang'a</option><option>Nairobi</option><option>Nakuru</option><option>Nandi</option><option>Narok</option><option>Nyamira</option><option>Nyandarua</option><option>Nyeri</option><option>Samburu</option><option>Siaya</option><option>Taita-Taveta</option><option>Tana River</option><option>Tharaka-Nithi</option><option>Trans Nzoia</option><option>Turkana</option><option>Uasin Gishu</option><option>Vihiga</option><option>Wajir</option><option>West Pokot</option></select></label>
+          <label class="field">What would you like someone to know?<textarea id="message" name="message" rows="4" maxlength="1000" placeholder="You can describe what happened in your own words..."></textarea></label>
+          <button class="button button-primary full" type="submit" id="submitBtn">Prepare secure report <span>→</span></button>
+          <p class="form-note">🔒 No real report is sent from this static demo.</p>
+        </form>
+      </div>
+    </section>
 
-                <div class="input-row">
+    <section class="resources shell" id="resources">
+      <div><span class="section-label">04 / RESOURCES</span><h2>Keep learning. Keep connected.</h2></div>
+      <div class="resource-links"><a href="https://www.nccs.go.ke/sites/default/files/resources/POPULAR%20VERSION%20OF%20CHILDREN%20ACT.pdf" target="_blank" rel="noopener noreferrer"><span>↗</span> Children Act — popular version</a><a href="https://www.nccs.go.ke/" target="_blank" rel="noopener noreferrer"><span>↗</span> National Council for Children's Services</a><a href="https://www.childrenservices.go.ke/" target="_blank" rel="noopener noreferrer"><span>↗</span> Children Services Kenya</a></div>
+    </section>
+  </main>
 
-                    <div class="form-control">
-    <label><i class="fas fa-map-marker-alt"></i> Where are you? (Select County)</label>
-    <select id="location" name="county" required>
-        <option value="" disabled selected>Choose your county...</option>
-        <option value="baringo">Baringo</option>
-        <option value="bomet">Bomet</option>
-        <option value="bungoma">Bungoma</option>
-        <option value="busia">Busia</option>
-        <option value="elgeyo-marakwet">Elgeyo Marakwet</option>
-        <option value="embu">Embu</option>
-        <option value="garissa">Garissa</option>
-        <option value="homa-bay">Homa Bay</option>
-        <option value="isiolo">Isiolo</option>
-        <option value="kajiado">Kajiado</option>
-        <option value="kakamega">Kakamega</option>
-        <option value="kericho">Kericho</option>
-        <option value="kiambu">Kiambu</option>
-        <option value="kilifi">Kilifi</option>
-        <option value="kirinyaga">Kirinyaga</option>
-        <option value="kisii">Kisii</option>
-        <option value="kisumu">Kisumu</option>
-        <option value="kitui">Kitui</option>
-        <option value="kwale">Kwale</option>
-        <option value="laikipia">Laikipia</option>
-        <option value="lamu">Lamu</option>
-        <option value="machakos">Machakos</option>
-        <option value="makueni">Makueni</option>
-        <option value="mandera">Mandera</option>
-        <option value="marsabit">Marsabit</option>
-        <option value="meru">Meru</option>
-        <option value="migori">Migori</option>
-        <option value="mombasa">Mombasa</option>
-        <option value="muranga">Murang'a</option>
-        <option value="nairobi">Nairobi</option>
-        <option value="nakuru">Nakuru</option>
-        <option value="nandi">Nandi</option>
-        <option value="narok">Narok</option>
-        <option value="nyamira">Nyamira</option>
-        <option value="nyandarua">Nyandarua</option>
-        <option value="nyeri">Nyeri</option>
-        <option value="samburu">Samburu</option>
-        <option value="siaya">Siaya</option>
-        <option value="taita-taveta">Taita Taveta</option>
-        <option value="tana-river">Tana River</option>
-        <option value="tharaka-nithi">Tharaka Nithi</option>
-        <option value="trans-nzoia">Trans Nzoia</option>
-        <option value="turkana">Turkana</option>
-        <option value="uasin-gishu">Uasin Gishu</option>
-        <option value="vihiga">Vihiga</option>
-        <option value="wajir">Wajir</option>
-        <option value="west-pokot">West Pokot</option>
-    </select>
-</div>
-                </div>
-
-                <div class="form-control">
-                    <label><i class="fas fa-comment-dots"></i> Describe what happened</label>
-                    <textarea id="message" rows="4" placeholder="You are safe here. Tell us what is bothering you..."></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Secure Report</button>
-            </form>
-
-            <h2 style="text-align: center; margin: 60px 0 30px 0;">Your Rights as a Kenyan Child</h2>
-        </section>
-
-        <section id="rights-section">
-    <div class="right-card">
-        <i class="fas fa-book-open"></i>
-        <h3>Right to Education</h3>
-        <p>Every child has the right to free and compulsory basic education. (Article 53)</p>
-    </div>
-    <div class="right-card">
-        <i class="fas fa-heartbeat"></i>
-        <h3>Right to Health</h3>
-        <p>You have the right to the highest attainable standard of health and medical care.</p>
-    </div>
-    <div class="right-card">
-        <i class="fas fa-hand-paper"></i>
-        <h3>Right to Protection</h3>
-        <p>You must be protected from abuse, neglect, and all forms of violence.</p>
-    </div>
-</section>
-
-
-<section id="legal-resources" style="text-align: center; padding: 50px 10%; background: #ffffff; border-radius: 20px; margin: 40px 0; border-top: 5px solid var(--primary);">
-    <h2 style="color: var(--dark); font-size: 2rem; margin-bottom: 20px;">The Law is on Your Side</h2>
-    <p style="color: #555; line-height: 1.6; max-width: 800px; margin: 0 auto 30px auto;">
-        In Kenya, your rights are protected by the <strong>Constitution (Article 53)</strong> and the <strong>Children Act 2022</strong>. These laws ensure that anyone who hurts you or denies you your rights faces justice.
-    </p>
-
-    <div class="consequences-box" style="background: #fff5f5; padding: 25px; border-radius: 15px; margin-bottom: 40px; border-left: 5px solid var(--secondary); text-align: left;">
-        <h4 style="color: var(--secondary); margin-bottom: 10px;"><i class="fas fa-gavel"></i> What happens to offenders?</h4>
-        <ul style="list-style: none; color: #444; font-size: 0.95rem;">
-            <li style="margin-bottom: 8px;">• <strong>Abuse & Neglect:</strong> Offenders can face heavy fines and long prison sentences.</li>
-            <li style="margin-bottom: 8px;">• <strong>Cyberbullying/Online Abuse:</strong> Up to 10 years in prison or a fine of 2 million KES.</li>
-            <li style="margin-bottom: 8px;">• <strong>Inheritance Theft:</strong> Anyone who tries to take property belonging to a child can be jailed for 2 years.</li>
-            <li>• <strong>Corporal Punishment:</strong> Physical beating of children is strictly illegal in all settings.</li>
-        </ul>
-    </div>
-
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.nccs.go.ke/sites/default/files/resources/POPULAR%20VERSION%20OF%20CHILDREN%20ACT.pdf" 
-           target="_blank" 
-           class="legal-btn">
-           <i class="fas fa-book-reader"></i> Read the "Popular Version" of the Law
-        </a>
-        
-        <a href="https://www.nccs.go.ke/" 
-           target="_blank" 
-           class="legal-btn secondary">
-           <i class="fas fa-external-link-alt"></i> National Council for Children's Services
-        </a>
-    </div>
-
-
-    <section id="legal-resources" style="text-align: center; padding: 50px 10%; position: relative;">
-    <div id="fact-bubble" class="fact-bubble">
-        <i class="fas fa-lightbulb"></i>
-        <span id="fact-text">Hover over a link to see a child rights fact!</span>
-    </div>
-
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.nccs.go.ke/sites/default/files/resources/POPULAR%20VERSION%20OF%20CHILDREN%20ACT.pdf" 
-           target="_blank" class="legal-btn fact-trigger">
-           <i class="fas fa-book-reader"></i> Read the Law
-        </a>
-        <a href="https://www.nccs.go.ke/" 
-           target="_blank" class="legal-btn secondary fact-trigger">
-           <i class="fas fa-external-link-alt"></i> NCCS Website
-        </a>
-    </div>
-</section>
-</section>
-
-<section id="legal-resources" style="text-align: center; padding: 50px 10%; background: #fff; border-radius: 20px; margin: 40px 0;">
-    <h2 style="color: var(--dark);">Know the Law & Consequences</h2>
-    <p style="margin-bottom: 30px; color: #666;">Want to read the full laws? In Kenya, the Children Act 2022 protects you. Anyone who violates these rights can face heavy fines or up to 10 years in prison.</p>
-    
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.nccs.go.ke/sites/default/files/resources/POPULAR%20VERSION%20OF%20CHILDREN%20ACT.pdf" 
-           target="_blank" 
-           class="legal-btn">
-           <i class="fas fa-file-pdf"></i> Read the Children Act (Simple Version)
-        </a>
-        
-        <a href="https://www.childrenservices.go.ke/" 
-           target="_blank" 
-           class="legal-btn secondary">
-           <i class="fas fa-external-link-alt"></i> Visit Children Services Official Site
-        </a>
-    </div>
-</section>
-    </main>
-
-    <script src="script.js"></script>
-
-    <a href="tel:116" class="floating-call">
-    <i class="fas fa-phone-alt"></i>
-    <span>Call 116</span>
-</a>
+  <footer class="footer"><div class="shell footer-inner"><div class="brand footer-brand"><span class="brand-mark">✦</span><span><strong>SAUTI YAKO</strong><small>KENYA CHILDREN ASSEMBLY</small></span></div><p>Every child deserves to be heard, respected and protected.</p><span class="footer-credit">Built for child participation • v2</span></div></footer>
+  <a class="floating-help" href="tel:116" aria-label="Call Child Helpline 116"><span>☎</span><b>116</b></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
 </body>
 </html>
