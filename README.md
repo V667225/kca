@@ -1,89 +1,72 @@
-<div align="center">
+# 🇰🇪 Kenya Children Assembly — Sauti Yako
 
-# ⚡ SAUTI YAKO
-### KENYA CHILDREN ASSEMBLY DIGITAL HUB
+**A modern, mobile-first digital platform for children's rights, participation and leadership.**
 
-![Status](https://img.shields.io/badge/STATUS-LIVE-00FF41?style=for-the-badge)
-![Mobile](https://img.shields.io/badge/MOBILE-READY-00F3FF?style=for-the-badge)
-![Coverage](https://img.shields.io/badge/COVERAGE-47%20COUNTIES-FF00FF?style=for-the-badge)
+## Tech stack
 
-**Sauti Yako, Haki Yako — a digital space designed to amplify children's voices, rights and safety.**
+- **Next.js App Router** — full-stack React framework
+- **TypeScript** — typed application code
+- **Tailwind CSS v4** — utility-first styling
+- **shadcn/ui-style primitives** — accessible, composable UI foundation
+- **Lucide React** — interface icons
+- **Supabase** — PostgreSQL database, Auth and Storage foundation
+- **Supabase SSR** — cookie-based authentication integration
+- **PWA** — web manifest + offline-first service worker
+- **GitHub Actions** — production build validation
+- **Vercel-ready** — recommended deployment target for the Next.js application
 
-[![Live Site](https://img.shields.io/badge/OPEN_LIVE_SITE-111111?style=for-the-badge&logo=googlechrome&logoColor=00FF41)](https://v667225.github.io/kca/)
+## Product areas
 
-</div>
+- 🏛️ Assembly information and participation
+- 🧑🏾‍⚖️ Children's leadership and representation
+- 📚 Rights education and resources
+- 📣 Announcements and events
+- 🛡️ Safety-oriented help/reporting experience
+- 📱 Installable offline-capable PWA
+- 🔐 Future authenticated admin and Assembly workflows
 
----
-
-## ✦ Vision
-
-Sauti Yako is a civic platform built around **child participation, protection, rights education and safe reporting**.
-
-The interface combines a high-energy dashboard with a safety-first reporting experience intended to make important information approachable for young users.
-
-## 🧭 Platform Flow
+## Project structure
 
 ```text
-Young Person
-     │
-     ├── Learn Rights
-     │      ↓
-     │   Rights Education
-     │
-     ├── Explore Assembly
-     │      ↓
-     │   Participation Hub
-     │
-     └── Seek Help / Report
-            ↓
-       Safety-oriented flow
+app/                  Next.js routes, layout and global styles
+components/           Reusable UI and navigation components
+components/ui/        shadcn-style primitives
+lib/supabase/         Browser + server Supabase clients
+lib/                  Shared utilities
+public/               PWA manifest, service worker and icons
+supabase/schema.sql   Initial Postgres schema + RLS baseline
+proxy.ts              Supabase session refresh proxy
 ```
 
-## 🚀 Core Modules
+## Local development
 
-### Assembly Command Center
-- County-focused participation dashboard
-- Community / assembly information
-- Youth leadership presentation layer
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
 
-### Safe Reporting Portal
-- Child-friendly reporting flow
-- County-based routing
-- Safety-oriented interface feedback
+Set these variables in `.env.local`:
 
-### Rights Engine
-- Article 53-focused rights education
-- Interactive educational information
-- Clear explanations of protection and access to services
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+```
 
-## 🛡️ Safety & Privacy
+## Database
 
-Any real deployment handling sensitive reports should use secure server-side processing, strict access control, data minimization, audit logging and professional child-protection procedures.
+Run `supabase/schema.sql` in a Supabase project to create the initial public content tables and Row Level Security baseline. Sensitive reports intentionally have **no public insert policy**. A real child-protection reporting workflow should add server-side validation, rate limiting, access control, auditability, data minimization and an approved safeguarding process before accepting sensitive reports.
 
-**Never treat a public frontend as a secure reporting backend.**
+## Deployment
 
-## 🛠️ Stack
+The project is designed for Vercel deployment. Connect the GitHub repository to Vercel, add the Supabase environment variables, and deploy. GitHub Actions also validates production builds on pushes and pull requests.
 
-`HTML5` · `CSS3` · `JavaScript` · `Font Awesome` · `PWA-oriented UI`
+## Important safety note
 
-## 🌐 Live Project
+The reporting form in the current frontend is a **demo interface**. It does not transmit or claim to securely transmit sensitive reports.
 
-**[→ Open Sauti Yako](https://v667225.github.io/kca/)**
+## Project lead
 
-## 🗺️ Roadmap
+**Vincent Odhiambo** — web developer and youth advocate.
 
-- [ ] Secure backend for reports
-- [ ] Privacy-first data handling
-- [ ] Accessibility improvements
-- [ ] Expanded rights education
-- [ ] County information improvements
-
-## 👨‍💻 Project Lead
-
-**Vince Odhiambo**
-
-Technology builder · youth advocate · web developer
-
----
-
-<p align="center"><sub>Every child deserves to be heard, respected and protected.</sub></p>
+> Every child deserves to be heard, respected and protected.
