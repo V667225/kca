@@ -14,6 +14,9 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  NEXT_PUBLIC_BASE_PATH: /KCA
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,9 +34,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build static Next.js site
+      - name: Validate and build static site
         run: npm run build
 
       - name: Upload Pages artifact
