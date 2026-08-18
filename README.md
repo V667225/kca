@@ -1,89 +1,57 @@
-<div align="center">
+# 🇰🇪 Kenya Children Assembly — Sauti Yako
 
-# ⚡ SAUTI YAKO
-### KENYA CHILDREN ASSEMBLY DIGITAL HUB
+A modern civic-tech platform for the **Kenya Children Assembly**, designed around parliamentary participation, children's rights education, youth leadership and public engagement.
 
-![Status](https://img.shields.io/badge/STATUS-LIVE-00FF41?style=for-the-badge)
-![Mobile](https://img.shields.io/badge/MOBILE-READY-00F3FF?style=for-the-badge)
-![Coverage](https://img.shields.io/badge/COVERAGE-47%20COUNTIES-FF00FF?style=for-the-badge)
+> **Sauti Yako, Haki Yako.**
 
-**Sauti Yako, Haki Yako — a digital space designed to amplify children's voices, rights and safety.**
+## What this rebuild delivers
 
-[![Live Site](https://img.shields.io/badge/OPEN_LIVE_SITE-111111?style=for-the-badge&logo=googlechrome&logoColor=00FF41)](https://v667225.github.io/kca/)
+- 🏛️ Parliamentary-style national assembly experience
+- 📜 House Business: sittings, Order Papers and Hansard concepts
+- ⚖️ Rights Library focused on child rights and Article 53
+- 👥 Assembly and representation hub
+- 🗳️ Petitions and public participation flows
+- 📰 News and Assembly updates
+- 📱 Responsive, mobile-first interface
+- ♿ Accessibility-conscious structure and semantic HTML
+- ⚡ Modern React/Next.js architecture
+- 🎨 Tailwind CSS v4 styling
+- ✨ Framer Motion interactions and Lucide icons
+- 🚀 Static export and GitHub Pages deployment workflow
 
-</div>
+## Technology
 
----
+`Next.js 16` · `React 19` · `TypeScript` · `Tailwind CSS 4` · `Framer Motion` · `Lucide React`
 
-## ✦ Vision
+## Architecture
 
-Sauti Yako is a civic platform built around **child participation, protection, rights education and safe reporting**.
+The frontend is intentionally static-first so it can run on GitHub Pages. Dynamic services such as authenticated member dashboards, petitions, notifications and sensitive reporting should later be connected to a secure backend/API.
 
-The interface combines a high-energy dashboard with a safety-first reporting experience intended to make important information approachable for young users.
+### Planned production modules
 
-## 🧭 Platform Flow
+- Member directory and profiles
+- Committees and committee schedules
+- Bills, motions and legislative tracker
+- Searchable Hansard
+- Petition submission and tracking
+- Events and sitting calendar
+- Secure child-protection reporting service
+- CMS/admin dashboard
+- Analytics with privacy controls
+- PWA/offline rights library
 
-```text
-Young Person
-     │
-     ├── Learn Rights
-     │      ↓
-     │   Rights Education
-     │
-     ├── Explore Assembly
-     │      ↓
-     │   Participation Hub
-     │
-     └── Seek Help / Report
-            ↓
-       Safety-oriented flow
-```
+## Important distinction
 
-## 🚀 Core Modules
+This is an **independent Kenya Children Assembly digital platform concept**. It is not the official website of the Parliament of Kenya or the National Assembly of Kenya. Parliamentary information and official public services should be verified against official government sources.
 
-### Assembly Command Center
-- County-focused participation dashboard
-- Community / assembly information
-- Youth leadership presentation layer
+## Deployment
 
-### Safe Reporting Portal
-- Child-friendly reporting flow
-- County-based routing
-- Safety-oriented interface feedback
+The repository includes a GitHub Actions workflow that builds the Next.js static export and deploys it to GitHub Pages from `main`.
 
-### Rights Engine
-- Article 53-focused rights education
-- Interactive educational information
-- Clear explanations of protection and access to services
+## Project Lead
 
-## 🛡️ Safety & Privacy
-
-Any real deployment handling sensitive reports should use secure server-side processing, strict access control, data minimization, audit logging and professional child-protection procedures.
-
-**Never treat a public frontend as a secure reporting backend.**
-
-## 🛠️ Stack
-
-`HTML5` · `CSS3` · `JavaScript` · `Font Awesome` · `PWA-oriented UI`
-
-## 🌐 Live Project
-
-**[→ Open Sauti Yako](https://v667225.github.io/kca/)**
-
-## 🗺️ Roadmap
-
-- [ ] Secure backend for reports
-- [ ] Privacy-first data handling
-- [ ] Accessibility improvements
-- [ ] Expanded rights education
-- [ ] County information improvements
-
-## 👨‍💻 Project Lead
-
-**Vince Odhiambo**
-
-Technology builder · youth advocate · web developer
+**Vince Odhiambo** — technology builder, web developer and youth advocate.
 
 ---
 
-<p align="center"><sub>Every child deserves to be heard, respected and protected.</sub></p>
+Every child deserves to be heard, respected and protected.
